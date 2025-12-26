@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #A5E1AD;
+  font-family: 'VT323', monospace;
+  min-height: 100vh;
+}
+
+header {
+  border-bottom: 1px solid #4CA1A3;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+}
+
+.logo {
+  color: #4CA1A3;
+  font-size: 28px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  color: #A5E1AD;
+}
+
+.nav-links li:hover {
+  color: #511281;
+}
+
+.lang-switch button {
+  background: transparent;
+  border: 1px solid #4CA1A3;
+  color: #4CA1A3;
+  font-family: inherit;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.lang-switch button:hover {
+  background-color: #21094E;
+}
+
+main {
+  padding: 40px;
+}
+
+.section {
+  display: none;
+  margin-bottom: 80px;
+}
+
+.section.active {
+  display: block;
+}
+
+.terminal {
+  color: #4CA1A3;
+  border: 1px solid #511281;
+  padding: 24px;
+  box-shadow: 0 0 20px #21094E;
+  font-size: 20px;
+}
+
+h2 {
+  color: #4CA1A3;
+  margin-bottom: 16px;
+  font-size: 28px;
+}
+
+p {
+  max-width: 800px;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+.skills-container,
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
