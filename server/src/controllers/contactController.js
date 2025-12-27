@@ -1,17 +1,21 @@
 const fs = require('fs');
 const path = require('path');
 
-const saveMessage = (req, res) => {
-    const { name, email, message } = req.body;
-    const fileName = `${Date.now()}-message.json`;
-    const filePath = path.join(__dirname, '../../messages', fileName);
+const saveContact = (req, res) => {
+  const { name, email, message } = req.body;
+  const filePath = path.join(__dirname, '../../contacts.json');
 
-    const data = { name, email, message, date: new Date() };
-    
-    fs.mkdirSync(path.join(__dirname, '../../messages'), { recursive: true });
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  const newContact = { name, email, message };
+  let contacts = [];
 
-    res.status(200).send('Message saved successfully');
+  if (fs.existsSync(filePath)) {
+    contacts = JSON.parse(fs.readFileSync(filePath));
+  }
+
+  contacts.push(newContact);
+  fs.writeFileSync(filePath, JSON.stringify(contacts, null, 2));
+
+  res.send('Contact saved!');
 };
 
-module.exports = { saveMessage };
+module.exports = { saveContact };
