@@ -1,0 +1,5 @@
+────────────────────────────────────────────────────
+>> INITIALIZING PORTFOLIO SYSTEM...
+>> MODE: FULL STACK / TERMINAL / DARK
+>> STATUS: ONLINE
+────────────────────────────────────────────────────

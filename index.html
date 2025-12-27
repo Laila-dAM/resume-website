@@ -2,71 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Laila Mota | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laila Mota | Full Stack Portfolio</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button data-lang="en">EN</button>
+        <button data-lang="pt">PT</button>
+        <button data-lang="es">ES</button>
+      </div>
+    </nav>
+  </header>
 
-<header>
-  <nav>
-    <div class="logo">LM</div>
+  <main>
+    <section id="home" class="hero">
+      <h1>Hello, I'm Laila.</h1>
+      <h2>Computer Science Student & Full Stack Developer in Training</h2>
+      <p>Building code, design and ideas. (≧◡≦)</p>
+      <a href="#about" class="scroll-btn">Enter Portfolio</a>
+    </section>
 
-    <ul class="nav-links">
-      <li data-section="home">Home</li>
-      <li data-section="about">About</li>
-      <li data-section="education">Education</li>
-      <li data-section="skills">Skills</li>
-      <li data-section="projects">Projects</li>
-      <li data-section="contact">Contact</li>
-    </ul>
+    <section id="about" class="about">
+      <h2>About Me</h2>
+      <p>I am a dedicated Computer Science student seeking internships or junior positions. I enjoy learning, problem-solving, and contributing with commitment and creativity.</p>
+      <p>Availability: afternoons Mon-Sat, full-time Tue.</p>
+    </section>
 
-    <div class="lang-switch">
-      <button data-lang="en">EN</button>
-      <button data-lang="pt">PT</button>
-      <button data-lang="es">ES</button>
-    </div>
-  </nav>
-</header>
+    <section id="skills" class="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript, React</p>
+        </div>
+        <div class="skill-card">
+          <h3>Backend</h3>
+          <p>Node.js, Python, Flask, FastAPI</p>
+        </div>
+        <div class="skill-card">
+          <h3>Database</h3>
+          <p>MySQL, MongoDB, SQL</p>
+        </div>
+        <div class="skill-card">
+          <h3>Tools</h3>
+          <p>Git, Linux, Docker, Design Tools</p>
+        </div>
+      </div>
+    </section>
 
-<main>
+    <section id="projects" class="projects">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <h3>Interactive Programming Learning Platform</h3>
+          <p>Web platform for learning programming, Full Stack development with HTML, CSS, JS, SQL</p>
+          <a href="https://github.com/Laila-dAM/BITROT/tree/main/Project%201" target="_blank">GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>CyberPulse</h3>
+          <p>Threat monitoring system, Full Stack with Python, FastAPI, JS, SQL, ML, Docker</p>
+          <a href="https://github.com/Laila-dAM/CyberPulse" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
 
-  <section id="home" class="section active">
-    <pre class="terminal">
-> Hello, I'm Laila.
-> Computer Science Student
-> Full Stack Developer in Training
-> Looking for my first opportunity in IT
-    </pre>
-  </section>
+    <section id="contact" class="contact">
+      <h2>Contact</h2>
+      <p>Email: lailamota.238@gmail.com</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/laila-mota-674564314/" target="_blank">linkedin.com/in/laila-mota-674564314</a></p>
+      <p>GitHub: <a href="https://github.com/Laila-dAM" target="_blank">github.com/Laila-dAM</a></p>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p></p>
-  </section>
-
-  <section id="education" class="section">
-    <h2>Education</h2>
-    <p></p>
-  </section>
-
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skills-container"></div>
-  </section>
-
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-container"></div>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p></p>
-  </section>
-
-</main>
-
-<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
