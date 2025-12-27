@@ -4,13 +4,14 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", e => {
       e.preventDefault();
       const target = document.querySelector(link.getAttribute("href"));
-      target.scrollIntoView({ behavior: "smooth" });
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     });
   });
 
   const buttons = document.querySelectorAll(".lang-switcher button");
   const sections = document.querySelectorAll("[data-en][data-pt][data-es]");
-
   buttons.forEach(btn => {
     btn.addEventListener("click", () => {
       const lang = btn.dataset.lang;
@@ -21,10 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   const contactForm = document.getElementById("contact-form");
-  if (contactForm) {
+  const response = document.getElementById("form-response");
+
+  if (contactForm && response) {
     contactForm.addEventListener("submit", e => {
       e.preventDefault();
-      alert("Message sent! (Simulation)");
+      response.textContent = "Message sent successfully! ✔";
       contactForm.reset();
     });
   }
