@@ -1,0 +1,38 @@
+{
+  "theme": {
+    "background": "#0f1220",
+    "primary": "#7c7cff",
+    "secondary": "#38bdf8",
+    "accent": "#f472b6",
+    "danger": "#ef4444",
+    "text": "#e5e7eb"
+  },
+  "hover": {
+    "trigger": "mouse",
+    "duration": 180,
+    "intensity": 0.35,
+    "cursor": "pointer"
+  },
+  "glitch": {
+    "enabled": true,
+    "layers": 3,
+    "offset": 3,
+    "opacity": 0.85,
+    "blendMode": "screen"
+  },
+  "rgbSplit": {
+    "red": "#7c7cff",
+    "green": "#38bdf8",
+    "blue": "#f472b6"
+  },
+  "distortion": {
+    "skew": 4,
+    "noise": 0.12,
+    "flicker": true
+  },
+  "animation": {
+    "easing": "ease-out",
+    "repeat": 1,
+    "resetOnLeave": true
+  }
+}

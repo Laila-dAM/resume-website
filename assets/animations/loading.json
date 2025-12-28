@@ -1,0 +1,27 @@
+{
+  "theme": {
+    "background": "#0f1220",
+    "primary": "#7c7cff",
+    "secondary": "#38bdf8",
+    "accent": "#f472b6",
+    "muted": "#9ca3af"
+  },
+  "loader": {
+    "style": "bar",
+    "height": 4,
+    "radius": 2,
+    "speed": 1.2,
+    "glow": true
+  },
+  "progress": {
+    "showPercentage": true,
+    "font": "monospace",
+    "size": 14,
+    "color": "#e5e7eb"
+  },
+  "animation": {
+    "easing": "ease-in-out",
+    "loop": true,
+    "delay": 300
+  }
+}

@@ -1,21 +1,32 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs")
+const path = require("path")
 
-const saveContact = (req, res) => {
-  const { name, email, message } = req.body;
-  const filePath = path.join(__dirname, '../../contacts.json');
+const dataPath = path.join(__dirname, "../../contacts.json")
 
-  const newContact = { name, email, message };
-  let contacts = [];
+function saveContact(req, res) {
+  const { name, email, message } = req.body
 
-  if (fs.existsSync(filePath)) {
-    contacts = JSON.parse(fs.readFileSync(filePath));
+  if (!name || !email || !message) {
+    return res.status(400).json({ success: false })
   }
 
-  contacts.push(newContact);
-  fs.writeFileSync(filePath, JSON.stringify(contacts, null, 2));
+  let contacts = []
 
-  res.send('Contact saved!');
-};
+  if (fs.existsSync(dataPath)) {
+    const fileData = fs.readFileSync(dataPath)
+    contacts = JSON.parse(fileData)
+  }
 
-module.exports = { saveContact };
+  contacts.push({
+    name,
+    email,
+    message,
+    date: new Date().toISOString()
+  })
+
+  fs.writeFileSync(dataPath, JSON.stringify(contacts, null, 2))
+
+  res.status(200).json({ success: true })
+}
+
+module.exports = { saveContact }

@@ -1,0 +1,29 @@
+{
+  "theme": {
+    "background": "#0f1220",
+    "baseText": "#e5e7eb",
+    "glitchPrimary": "#7c7cff",
+    "glitchSecondary": "#38bdf8",
+    "glitchAccent": "#f472b6",
+    "noise": "#1f2933"
+  },
+  "glitch": {
+    "intensity": 0.35,
+    "frequency": 0.6,
+    "sliceHeight": 6,
+    "displacement": 4,
+    "chromaticShift": true,
+    "scanlines": true,
+    "flicker": true
+  },
+  "text": {
+    "font": "monospace",
+    "weight": 600,
+    "letterSpacing": 1.2
+  },
+  "animations": {
+    "duration": 180,
+    "delay": 1200,
+    "loop": true
+  }
+}

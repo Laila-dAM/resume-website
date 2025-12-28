@@ -1,34 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".navbar a");
+
   links.forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute("href"));
+    link.addEventListener("click", event => {
+      event.preventDefault();
+      const targetId = link.getAttribute("href");
+      const target = document.querySelector(targetId);
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
       }
     });
   });
 
-  const buttons = document.querySelectorAll(".lang-switcher button");
-  const sections = document.querySelectorAll("[data-en][data-pt][data-es]");
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const lang = btn.dataset.lang;
-      sections.forEach(sec => {
-        sec.textContent = sec.dataset[lang];
-      });
-    });
-  });
-
   const contactForm = document.getElementById("contact-form");
   const response = document.getElementById("form-response");
 
-  if (contactForm && response) {
-    contactForm.addEventListener("submit", e => {
-      e.preventDefault();
-      response.textContent = "Message sent successfully! ✔";
+  if (!contactForm || !response) return;
+
+  contactForm.addEventListener("submit", async event => {
+    event.preventDefault();
+
+    const data = {
+      name: contactForm.name.value.trim(),
+      email: contactForm.email.value.trim(),
+      message: contactForm.message.value.trim()
+    };
+
+    try {
+      const res = await fetch("http://localhost:3000/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      if (!res.ok) throw new Error();
+
+      response.textContent = "Message sent successfully.";
       contactForm.reset();
-    });
-  }
+    } catch {
+      response.textContent = "Error sending message.";
+    }
+  });
 });

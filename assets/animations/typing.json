@@ -1,0 +1,36 @@
+{
+  "theme": {
+    "background": "#0f1220",
+    "textPrimary": "#e5e7eb",
+    "textSecondary": "#9ca3af",
+    "accent": "#7c7cff",
+    "success": "#4ade80",
+    "warning": "#facc15",
+    "error": "#f87171",
+    "cursor": "#7c7cff"
+  },
+  "typing": {
+    "speed": 45,
+    "pause": 1200,
+    "loop": true,
+    "cursor": true
+  },
+  "lines": [
+    {
+      "text": "Hello, I'm a Computer Science student.",
+      "color": "textPrimary"
+    },
+    {
+      "text": "I build structured, clean and efficient systems.",
+      "color": "textSecondary"
+    },
+    {
+      "text": "Focused on web development and data organization.",
+      "color": "accent"
+    },
+    {
+      "text": "Turning ideas into functional projects.",
+      "color": "success"
+    }
+  ]
+}
