@@ -395,3 +395,20 @@ section {
   line-height: 1.4;
   font-size: 0.95rem;
 }
+
+.language-selector select {
+  background-color: var(--black-soft);
+  border: 1px solid var(--purple-medium);
+  color: var(--white-soft);
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: var(--font-terminal);
+  font-weight: 500;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.language-selector select:hover {
+  background-color: var(--purple-medium);
+  color: var(--white-soft);
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laila Mota | Portfólio Full Stack</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" sizes="32x32" href="assets/icons/home.png">
+  <link rel="apple-touch-icon" href="assets/icons/home.png">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home"><img src="assets/icons/home.png" alt="Home">Início</a></li>
+      <li><a href="#about"><img src="assets/icons/about.png" alt="About">Sobre</a></li>
+      <li><a href="#skills"><img src="assets/icons/tools.png" alt="Skills">Habilidades</a></li>
+      <li><a href="#projects"><img src="assets/icons/projects.png" alt="Projects">Projetos</a></li>
+      <li><a href="#contact"><img src="assets/icons/contact.png" alt="Contact">Contato</a></li>
+
+      <li class="language-selector">
+        <select id="language" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="pt" selected>Português</option>
+          <option value="es">Español</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section id="home" class="hero" style="background-image: url('assets/backgrounds/bg-grid.jpg');">
+    <h1>Olá, sou Laila</h1>
+    <h2>Estudante de Ciências da Computação & Desenvolvedora Full Stack</h2>
+    <p>Transformando ideias em soluções digitais confiáveis, estruturadas e focadas no usuário.</p>
+    <a href="#projects" class="scroll-btn">Veja Meus Projetos</a>
+  </section>
+
+  <section id="about" class="about" style="background-image: url('assets/backgrounds/bg-noise.jpeg');">
+    <h2>Sobre Mim</h2>
+    <div class="about-content">
+      <p>Graduanda em Ciências da Computação no 7º semestre, com foco em desenvolvimento de software e resolução de problemas.</p>
+      <p>Experiência em projetos full stack, gerenciamento de bancos de dados e design de sistemas estruturados, combinando habilidades técnicas com atenção aos detalhes.</p>
+      <p>Ativamente buscando oportunidades de estágio ou nível júnior em TI para crescimento profissional e contribuição em projetos de impacto.</p>
+      <p class="availability">Disponibilidade: Tarde (Segunda a Sábado)</p>
+      <a href="currículo_pt.pdf" target="_blank" class="download-cv">
+        Baixar Currículo (PDF)
+      </a>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Habilidades Principais</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="assets/icons/frontend.png" alt="Desenvolvimento Frontend">
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript, React</p>
+      </div>
+      <div class="skill-card">
+        <img src="assets/icons/backend.png" alt="Desenvolvimento Backend">
+        <h3>Backend</h3>
+        <p>Python, Node.js, Flask, FastAPI</p>
+      </div>
+      <div class="skill-card">
+        <img src="assets/icons/database.png" alt="Bancos de Dados">
+        <h3>Bancos de Dados</h3>
+        <p>MySQL, SQL, MongoDB</p>
+      </div>
+      <div class="skill-card">
+        <img src="assets/icons/tools.png" alt="Ferramentas & Tecnologias">
+        <h3>Ferramentas & Tecnologias</h3>
+        <p>Git, Linux, Docker, Ferramentas de Design</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="education-skills">
+    <h2>Formação Técnica & Acadêmica</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h3>Habilidades Técnicas</h3>
+        <div class="edu-items">
+          <div class="edu-item">
+            <strong>Programação:</strong>
+            <p>HTML, CSS, JavaScript, Java, Python, C, C++</p>
+          </div>
+          <div class="edu-item">
+            <strong>Bancos de Dados:</strong>
+            <p>SQL, MongoDB</p>
+          </div>
+          <div class="edu-item">
+            <strong>Outros:</strong>
+            <p>POO & Resolução Lógica de Problemas</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <h3>Formação Complementar</h3>
+        <div class="edu-items">
+          <div class="edu-item">
+            <strong>Design Gráfico:</strong>
+            <p>Photoshop, Illustrator, InDesign</p>
+          </div>
+          <div class="edu-item">
+            <strong>Desenvolvimento de Software:</strong>
+            <p>Aplicativos Android, Jogos 3D</p>
+          </div>
+          <div class="edu-item">
+            <strong>Computação Geral:</strong>
+            <p>Windows, Word, Excel, PowerPoint</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <h3>Idiomas</h3>
+        <div class="edu-items">
+          <div class="edu-item">
+            <p>Inglês – Avançado</p>
+          </div>
+          <div class="edu-item">
+            <p>Português – Nativo</p>
+          </div>
+          <div class="edu-item">
+            <p>Espanhol – Básico</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <h3>Cursos Adicionais</h3>
+        <div class="edu-items">
+          <div class="edu-item">
+            <p>Manutenção de Computadores & Suporte Técnico</p>
+          </div>
+          <div class="edu-item">
+            <p>Manutenção & Reparação de Dispositivos Móveis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects" style="background-image: url('assets/backgrounds/bg-scanlines.jpeg');">
+    <h2>Projetos</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <h3>Plataforma Interativa de Aprendizado de Programação</h3>
+        <p>Plataforma web para aprender conceitos de programação com visuais inspirados em ASCII e exercícios práticos.</p>
+        <a href="https://github.com/Laila-dAM/BITROT/tree/main/Project%201" target="_blank">
+          <img src="assets/icons/github.png" alt="GitHub">Ver no GitHub
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>CyberPulse</h3>
+        <p>Plataforma de monitoramento de ameaças com API, análise de dados, machine learning e infraestrutura baseada em Docker.</p>
+        <a href="https://github.com/Laila-dAM/CyberPulse" target="_blank">
+          <img src="assets/icons/github.png" alt="GitHub">Ver no GitHub
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>MOVBR</h3>
+        <p>Sistema web de transporte público focado em usabilidade, design de interface e organização de dados.</p>
+        <a href="https://github.com/GustavoLarre/MOVBR" target="_blank">
+          <img src="assets/icons/github.png" alt="GitHub">Ver no GitHub
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>VidaU</h3>
+        <p>Plataforma de bem-estar e saúde mental com interface responsiva e design centrado no usuário.</p>
+        <a href="https://github.com/gkalebe/Extensao-Web-Projeto-FInal" target="_blank">
+          <img src="assets/icons/github.png" alt="GitHub">Ver no GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contato</h2>
+    <p><img src="assets/icons/email.png" alt="Email">lailamota.238@gmail.com</p>
+    <p><img src="assets/icons/linkedin.png" alt="LinkedIn"><a href="https://www.linkedin.com/in/laila-mota-674564314/" target="_blank">linkedin.com/in/laila-mota-674564314</a></p>
+    <p><img src="assets/icons/github.png" alt="GitHub"><a href="https://github.com/Laila-dAM" target="_blank">github.com/Laila-dAM</a></p>
+
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Seu Nome" required>
+      <input type="email" name="email" placeholder="Seu Email" required>
+      <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+    <div id="form-response"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p align="center">૮ ˙Ⱉ˙ ა ʙᴜɴxɪᴇ.ᴢɪᴘ • © 2025 Laila Mota</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

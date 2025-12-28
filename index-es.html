@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laila Mota | Portafolio Full Stack</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" sizes="32x32" href="assets/icons/home.png">
+  <link rel="apple-touch-icon" href="assets/icons/home.png">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home"><img src="assets/icons/home.png" alt="Home">Inicio</a></li>
+      <li><a href="#about"><img src="assets/icons/about.png" alt="About">Sobre mí</a></li>
+      <li><a href="#skills"><img src="assets/icons/tools.png" alt="Skills">Habilidades</a></li>
+      <li><a href="#projects"><img src="assets/icons/projects.png" alt="Projects">Proyectos</a></li>
+      <li><a href="#contact"><img src="assets/icons/contact.png" alt="Contact">Contacto</a></li>
+
+      <li class="language-selector">
+        <select id="language" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+          <option value="es" selected>Español</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <section id="home" class="hero" style="background-image: url('assets/backgrounds/bg-grid.jpg');">
+    <h1>Hola, soy Laila</h1>
+    <h2>Estudiante de Ciencias de la Computación & Desarrolladora Full Stack</h2>
+    <p>Transformando ideas en soluciones digitales confiables, estructuradas y centradas en el usuario.</p>
+    <a href="#projects" class="scroll-btn">Ver Mis Proyectos</a>
+  </section>
+
+  <section id="about" class="about" style="background-image: url('assets/backgrounds/bg-noise.jpeg');">
+    <h2>Sobre Mí</h2>
+    <div class="about-content">
+      <p>Estudiante universitaria de Ciencias de la Computación en el 7º semestre, enfocada en desarrollo de software y resolución de problemas.</p>
+      <p>Experiencia en proyectos full stack, gestión de bases de datos y diseño de sistemas estructurados, combinando habilidades técnicas con atención al detalle.</p>
+      <p>Buscando activamente oportunidades de prácticas o nivel junior en TI para crecer profesionalmente y contribuir a proyectos significativos.</p>
+      <p class="availability">Disponibilidad: Tarde (Lunes a Sábado)</p>
+      <a href="currículo_es.pdf" target="_blank" class="download-cv">
+        Descargar CV (PDF)
+      </a>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Habilidades Principales</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="assets/icons/frontend.png" alt="Desarrollo Frontend">
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript, React</p>
+      </div>
+      <div class="skill-card">
+        <img src="assets/icons/backend.png" alt="Desarrollo Backend">
+        <h3>Backend</h3>
+        <p>Python, Node.js, Flask, FastAPI</p>
+      </div>
+      <div class="skill-card">
+        <img src="assets/icons/database.png" alt="Bases de Datos">
+        <h3>Bases de Datos</h3>
+        <p>MySQL, SQL, MongoDB</p>
+      </div>
+      <div class="skill-card">
+        <img src="assets/icons/tools.png" alt="Herramientas & Tecnologías">
+        <h3>Herramientas & Tecnologías</h3>
+        <p>Git, Linux, Docker, Herramientas de Diseño</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="education-skills">
+    <h2>Formación Técnica & Académica</h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h3>Habilidades Técnicas</h3>
+        <div class="edu-items">
+          <div class="edu-item">
+            <strong>Programación:</strong>
+            <p>HTML, CSS, JavaScript, Java, Python, C, C++</p>
+          </div>
+          <div class="edu-item">
+            <strong>Bases de Datos:</strong>
+            <p>SQL, MongoDB</p>
+          </div>
+          <div class="edu-item">
+            <strong>Otros:</strong>
+            <p>POO & Resolución Lógica de Problemas</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <h3>Educación Complementaria</h3>
+        <div class="edu-items">
+          <div class="edu-item">
+            <strong>Diseño Gráfico:</strong>
+            <p>Photoshop, Illustrator, InDesign</p>
+          </div>
+          <div class="edu-item">
+            <strong>Desarrollo de Software:</strong>
+            <p>Aplicaciones Android, Juegos 3D</p>
+          </div>
+          <div class="edu-item">
+            <strong>Informática General:</strong>
+            <p>Windows, Word, Excel, PowerPoint</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <h3>Idiomas</h3>
+        <div class="edu-items">
+          <div class="edu-item">
+            <p>Inglés – Avanzado</p>
+          </div>
+          <div class="edu-item">
+            <p>Portugués – Nativo</p>
+          </div>
+          <div class="edu-item">
+            <p>Español – Básico</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <h3>Cursos Adicionales</h3>
+        <div class="edu-items">
+          <div class="edu-item">
+            <p>Mantenimiento de Computadoras & Soporte Técnico</p>
+          </div>
+          <div class="edu-item">
+            <p>Mantenimiento & Reparación de Dispositivos Móviles</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects" style="background-image: url('assets/backgrounds/bg-scanlines.jpeg');">
+    <h2>Proyectos</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <h3>Plataforma Interactiva de Aprendizaje de Programación</h3>
+        <p>Plataforma web para aprender conceptos de programación con visuales inspirados en ASCII y ejercicios prácticos.</p>
+        <a href="https://github.com/Laila-dAM/BITROT/tree/main/Project%201" target="_blank">
+          <img src="assets/icons/github.png" alt="GitHub">Ver en GitHub
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>CyberPulse</h3>
+        <p>Plataforma de monitoreo de amenazas con API, análisis de datos, machine learning e infraestructura basada en Docker.</p>
+        <a href="https://github.com/Laila-dAM/CyberPulse" target="_blank">
+          <img src="assets/icons/github.png" alt="GitHub">Ver en GitHub
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>MOVBR</h3>
+        <p>Sistema web de transporte público enfocado en usabilidad, diseño de interfaz y organización de datos.</p>
+        <a href="https://github.com/GustavoLarre/MOVBR" target="_blank">
+          <img src="assets/icons/github.png" alt="GitHub">Ver en GitHub
+        </a>
+      </div>
+      <div class="project-card">
+        <h3>VidaU</h3>
+        <p>Plataforma de bienestar y salud mental con interfaz responsiva y diseño centrado en el usuario.</p>
+        <a href="https://github.com/gkalebe/Extensao-Web-Projeto-FInal" target="_blank">
+          <img src="assets/icons/github.png" alt="GitHub">Ver en GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <p><img src="assets/icons/email.png" alt="Email">lailamota.238@gmail.com</p>
+    <p><img src="assets/icons/linkedin.png" alt="LinkedIn"><a href="https://www.linkedin.com/in/laila-mota-674564314/" target="_blank">linkedin.com/in/laila-mota-674564314</a></p>
+    <p><img src="assets/icons/github.png" alt="GitHub"><a href="https://github.com/Laila-dAM" target="_blank">github.com/Laila-dAM</a></p>
+
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Tu Nombre" required>
+      <input type="email" name="email" placeholder="Tu Email" required>
+      <textarea name="message" placeholder="Tu Mensaje" required></textarea>
+      <button type="submit">Enviar Mensaje</button>
+    </form>
+    <div id="form-response"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p align="center">૮ ˙Ⱉ˙ ა ʙᴜɴxɪᴇ.ᴢɪᴘ • © 2025 Laila Mota</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
