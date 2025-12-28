@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".navbar a[href^='#']");
+  const links = document.querySelectorAll(".navbar a");
 
   links.forEach(link => {
     link.addEventListener("click", event => {
@@ -26,11 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
       message: contactForm.message.value.trim()
     };
 
-    if (!data.name || !data.email || !data.message) {
-      response.textContent = "Please fill in all fields.";
-      return;
-    }
-
     try {
       const res = await fetch("http://localhost:3000/contact", {
         method: "POST",
@@ -40,22 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!res.ok) throw new Error();
 
-      response.textContent = "Message sent successfully.";
+      response.textContent = "Mensagem enviada com sucesso!";
       contactForm.reset();
     } catch {
-      response.textContent = "Error sending message.";
+      response.textContent = "Erro ao enviar a mensagem.";
     }
   });
 });
 
 function changeLanguage(lang) {
-  const urls = {
-    en: "index.html",
-    pt: "index-pt.html",
-    es: "index-es.html"
-  };
-
-  if (urls[lang]) {
-    window.location.href = urls[lang];
+  if (lang === "en") {
+    window.location.href = "index.html";
+  } else if (lang === "pt") {
+    window.location.href = "index-pt.html";
+  } else if (lang === "es") {
+    window.location.href = "index-es.html";
   }
 }
