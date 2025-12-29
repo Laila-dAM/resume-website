@@ -1,5 +1,8 @@
-{
-  "name": "Seu Nome",
-  "email": "seu@email.com",
-  "message": "Sua mensagem"
-}
+[
+  {
+    "name": "teste",
+    "email": "teste@example.com",
+    "message": "hello",
+    "date": "2025-12-29T16:37:12.517Z"
+  }
+]
