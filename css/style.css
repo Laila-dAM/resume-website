@@ -412,3 +412,46 @@ section {
   background-color: var(--purple-medium);
   color: var(--white-soft);
 }
+
+.art-carousel {
+  border-top: 2px solid var(--purple-medium);
+  background-color: var(--black);
+}
+
+.art-carousel h2 {
+  font-size: 2rem;
+  color: var(--purple-medium);
+  margin-bottom: 2rem;
+}
+
+.carousel-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: carousel-scroll 80s linear infinite;
+}
+
+.carousel-track video {
+  width: 220px;
+  border-radius: 12px;
+  background-color: var(--black-soft);
+  border: 1px solid var(--purple-medium);
+}
+
+.carousel-wrapper:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+@keyframes carousel-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
